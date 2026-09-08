@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#236445">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Fall 2026 game-day snack schedule.">
+    <title>Soccer Game Snacks Fall 2026</title>
+    <link rel="icon" href="assets/icons/shield.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#schedule">Skip to schedule</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./" aria-label="Team snack schedule">
+          <span class="brand-mark"><img src="assets/icons/shield.svg" width="22" height="22" alt=""></span>
+          <span>TEAM SNACKS</span>
+        </a>
+        <span class="season">FALL 2026</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">SATURDAYS, SORTED</p>
+          <h1 id="page-title">Soccer Game Snacks Fall 2026</h1>
+          <p class="intro-description">A little fuel for the final whistle.</p>
+          <p class="responsibility"><img src="assets/icons/apple.svg" width="18" height="18" alt=""> Snacks + drinks <span aria-hidden="true">&middot;</span> One family per game</p>
+        </div>
+        <img class="soccer-photo" src="assets/soccer.jpg" alt="A soccer ball on the grass" width="200" height="150">
+      </section>
+
+      <p id="preview-notice" class="notice preview-notice" hidden><strong>Preview only.</strong> Sample signups stay in this tab and are not shared with the team.</p>
+      <p id="team-note" class="notice team-note" hidden></p>
+
+      <section class="schedule-section" id="schedule" aria-labelledby="schedule-title">
+        <div class="schedule-heading">
+          <div><h2 id="schedule-title">Game-day lineup</h2><p id="schedule-summary">Loading the schedule...</p></div>
+          <button id="refresh" class="icon-button" type="button" aria-label="Refresh schedule" title="Refresh schedule"><img src="assets/icons/refresh-cw.svg" width="19" height="19" alt=""></button>
+        </div>
+        <div class="coverage" role="progressbar" aria-label="Games with snacks covered" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div id="coverage-fill"></div></div>
+        <div class="schedule-toolbar">
+          <div class="tabs" role="group" aria-label="Filter games">
+            <button type="button" data-filter="all" aria-pressed="true">All games <span id="all-count">8</span></button>
+            <button type="button" data-filter="open" aria-pressed="false">Needs snacks <span id="open-count">-</span></button>
+          </div>
+          <span class="timezone">All times Eastern</span>
+        </div>
+        <div id="schedule-message" class="notice" role="status" hidden></div>
+        <div id="games" aria-busy="true"><p class="empty-state">Loading game dates...</p></div>
+        <div class="schedule-footer"><span><img src="assets/icons/lock-keyhole.svg" width="15" height="15" alt=""> Claimed spots are reserved.</span><span>Thanks for pitching in.</span></div>
+      </section>
+      <footer class="page-footer"><span>Team snacks <span aria-hidden="true">&middot;</span> Fall 2026</span><span>See you on the sidelines.</span></footer>
+      <noscript><p class="notice">Please enable JavaScript to see the schedule and sign up.</p></noscript>
+    </main>
+
+    <dialog id="signup-dialog" aria-labelledby="signup-title" aria-describedby="signup-game">
+      <div class="dialog-heading"><span class="eyebrow">YOUR TURN ON SNACK DUTY</span><button class="icon-button" id="close-dialog" type="button" aria-label="Close signup" title="Close signup"><img src="assets/icons/x.svg" width="20" height="20" alt=""></button></div>
+      <h2 id="signup-title">Bring the post-game snacks</h2>
+      <p id="signup-game" class="dialog-game"></p>
+      <form id="signup-form">
+        <label for="family-name">Your name or family name</label>
+        <input id="family-name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="e.g. The Garcia family">
+        <label for="signup-note">Note <span class="optional">(optional)</span></label>
+        <textarea id="signup-note" name="note" rows="3" maxlength="240" placeholder="e.g. Orange slices, pretzels, and juice boxes"></textarea>
+        <p class="commitment"><img src="assets/icons/lock-keyhole.svg" width="17" height="17" alt=""><span>You are signing up for both snacks and drinks. Your spot will be reserved; contact the organizer if your plans change.</span></p>
+        <p id="form-message" class="form-message" role="alert" hidden></p>
+        <button type="submit" id="confirm-signup" class="primary-button"><img src="assets/icons/check.svg" width="18" height="18" alt=""><span>Count me in</span></button>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
+</html>
