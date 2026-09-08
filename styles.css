@@ -56,9 +56,10 @@ h2 { font-size: 20px; font-weight: 700; margin: 0; }
 .month-label { margin: 0; padding: 15px 0 11px; font-size: 11px; font-weight: 700; color: #566359; text-transform: uppercase; }
 .month-group:first-child .month-label { padding-top: 0; }
 .game { display: grid; grid-template-columns: 58px minmax(180px, 1fr) minmax(170px, .9fr) 132px; align-items: center; column-gap: 22px; min-height: 105px; padding: 19px 0; border-top: 1px solid var(--line); }
-.date-block { width: 54px; height: 62px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #eaf0e8; border-radius: 5px; }
+.date-block { width: 54px; height: 76px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #eaf0e8; border-radius: 5px; }
+.date-month { font-size: 10px; line-height: 1.1; color: #63735f; margin-bottom: 3px; font-weight: 650; }
 .date-day { font-size: 25px; line-height: 1.1; font-weight: 650; }
-.date-weekday { font-size: 9px; color: #63735f; margin-top: 5px; font-weight: 650; text-transform: uppercase; }
+.date-weekday { font-size: 9px; color: #63735f; margin-top: 4px; font-weight: 650; }
 .game-time { font-size: 14px; font-weight: 650; margin: 0; }
 .signup-detail { min-width: 0; }
 .signup-status { font-size: 13px; font-weight: 650; margin: 0; display: flex; align-items: center; gap: 7px; overflow-wrap: anywhere; }
@@ -120,7 +121,7 @@ input::placeholder, textarea::placeholder { color: #7c857f; font-size: 13px; }
   .timezone { font-size: 10px; }
   .tabs button { padding: 7px 9px; font-size: 11px; gap: 5px; }
   .game { grid-template-columns: 43px minmax(0, 1fr); column-gap: 12px; row-gap: 12px; padding: 20px 0; }
-  .date-block { width: 43px; height: 56px; grid-row: 1; }
+  .date-block { width: 43px; height: 70px; grid-row: 1; }
   .date-day { font-size: 23px; }
   .game-time { font-size: 14px; }
   .signup-detail { grid-column: 2; grid-row: 2; }

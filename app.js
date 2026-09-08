@@ -111,7 +111,12 @@
       row.setAttribute("aria-label", dateText(game, { month: "long", day: "numeric" }));
       const date = node("div", "date-block");
       date.setAttribute("aria-hidden", "true");
-      date.append(node("span", "date-day", dateText(game, { day: "numeric" })), node("span", "date-weekday", dateText(game, { weekday: "short" })));
+      const shortMonth = dateText(game, { month: "short" });
+      date.append(
+        node("span", "date-month", shortMonth === "Sep" ? "Sept" : shortMonth),
+        node("span", "date-day", dateText(game, { day: "numeric" })),
+        node("span", "date-weekday", dateText(game, { weekday: "short" })),
+      );
       const details = node("div", "game-details");
       details.append(node("p", "game-time", timeRange(game)));
       const signup = node("div", `signup-detail${game.name ? " claimed" : ""}`);
